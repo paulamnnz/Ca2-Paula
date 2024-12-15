@@ -1,0 +1,716 @@
+/* Reset and General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* General Title Styling */
+.section-title {
+    font-size: 2.5rem; /* Adjust to make it prominent */
+    font-weight: bold; /* Bold to emphasize titles */
+    color: #333; /* Neutral dark color */
+    margin-bottom: 2rem; /* Space below the title */
+    text-align: center; /* Center-align titles across sections */
+}
+
+/* Removing the Purple Line Underneath */
+.section-title::after {
+    content: none; /* Removes the default line */
+}
+
+/* Optional: Add Subtle Shadow for Visual Impact */
+.section-title {
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjust Section-Specific Margins */
+#experience .section-title,
+#skills .section-title,
+#education .section-title,
+#portfolio .section-title {
+    margin-bottom: 1.5rem;
+}
+
+
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+/* Navbar */
+.navbar {
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background for readability */
+    position: fixed;
+    top: 0;
+    width: 100%; /* Full width of the viewport */
+    z-index: 10; /* Ensures the navbar stays above other elements */
+}
+
+.navbar .nav-link {
+    color: #fff;
+    font-size: 1rem;
+    margin: 0 10px;
+}
+
+.container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%; /* Full width of the viewport */
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Ensures no overflow happens */
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Ensures the image covers the entire section */
+    z-index: -1; /* Push the image to the background */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-title {
+    color: #fff;
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 0; /* Remove any default margins */
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+.hero-subtitle {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0; /* Remove any default margins */
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Button styles */
+.button-group .btn {
+    margin-top: 20px;
+}
+
+
+
+.nav-links,
+.contact-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links a,
+.contact-links a {
+    text-decoration: none;
+    color: #222; /* Gray color to match the minimalist style */
+    font-weight: 400; /* Normal font weight */
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover,
+.contact-links a:hover {
+    color: #555; /* Darker color on hover for better visibility */
+}
+
+.navbar-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #222;
+    text-align: center;
+}
+
+/* Navbar Specific Styling */
+.navbar-left {
+    flex: 2; /* Give slightly more space for left side navigation */
+}
+
+.navbar-center {
+    flex: 1;
+    text-align: center;
+}
+
+.navbar-right {
+    flex: 1;
+    text-align: right;
+}
+
+/* Contact Icons */
+.contact-links i {
+    font-size: 1.2rem;
+    color: #222;
+    transition: color 0.3s ease-in-out;
+}
+
+.contact-links i:hover {
+    color: #555; /* Slightly darker when hovered */
+}
+
+/* Main Section */
+#main {
+    height: 90vh; /* Cover most of the screen height */
+}
+
+.text-content {
+    max-width: 50%;
+}
+
+.greeting {
+    font-size: 1.5rem;
+    color: #6c63ff; /* Subtle purple */
+    margin-bottom: 0.5rem;
+}
+
+.display-3 {
+    font-weight: 700;
+    color: #222;
+}
+
+.lead {
+    font-size: 1.5rem;
+    color: #666;
+}
+
+.button-group .btn-primary {
+    background-color: #6c63ff;
+    border-color: #6c63ff;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.button-group .btn-primary:hover {
+    background-color: #5555dd;
+    border-color: #5555dd;
+}
+
+.profile-image {
+    width: 600px;   /* Fixed width for square */
+    height: 600px;  /* Fixed height for square */
+    overflow: hidden;  /* Hide overflow */
+    border-radius: 0%;  /* To make it circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-image img {
+    object-fit: cover;  /* Ensure the image covers the square without distortion */
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Container for About Me Section */
+/* Container for About Me Section */
+.about-section {
+    margin: 4rem auto; /* Center the section vertically and horizontally */
+    max-width: 1200px; /* Limit the width for readability */
+    padding: 0; /* Remove padding */
+    display: flex; /* Use flexbox for side-by-side layout */
+    align-items: flex-start; /* Align the photo with the top of the text */
+    gap: 2rem; /* Add space between the image and text */
+}
+
+/* Left section (photo) */
+.about-photo {
+    flex: 1; /* Image takes up 1 part of the section width */
+    display: flex; /* Use flex to align the photo vertically */
+    align-items: flex-start;
+}
+
+.profile-photo {
+    width: 100%; /* Make the image responsive */
+    max-width: 300px; /* Limit the image width */
+    height: auto;
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Right section (text) */
+.about-content {
+    flex: 2; /* Text takes up 2 parts of the section width */
+    text-align: left; /* Align text to the left */
+}
+
+.about-content h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #333; /* Darker color for the title */
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555; /* Softer color for body text */
+}
+
+
+
+/* Education Section Styling */
+#education {
+    background-color: white; /* Light grey background */
+    padding: 5rem 0;
+}
+
+
+
+.accordion-button {
+    background-color: #ffffff;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.accordion-button:hover {
+    background-color: #f0f0f0;
+}
+
+.accordion-body {
+    background-color: #ffffff;
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.accordion-item {
+    border: none;
+    margin-bottom: 1rem;
+}
+
+#educationDetails {
+    text-align: center;
+}
+
+.education-photo {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.education-period {
+    font-weight: 500;
+    color: #555;
+}
+
+#contactInfo h5 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+#contactInfo p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* SKILLS STYLES */
+
+/* Skills Section Styling */
+.skills-section .container {
+    display: flex;
+    justify-content: space-between; /* Ensures both cards are evenly spaced */
+    align-items: center; /* Aligns items vertically in the center */
+}
+
+.skill-card {
+    width: 100%; /* Ensure both cards have the same width */
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.skill-icon {
+    width: 60px;
+    height: 60px;
+}
+
+.skill-title {
+    font-weight: 700;
+    color: #6c63ff;
+}
+
+.skill-details {
+    display: none; /* Hide details initially */
+}
+
+.skill-item {
+    margin-bottom: 1rem;
+}
+
+.progress-bar {
+    background-color: #6c63ff;
+}
+
+
+/* PORTFOLIO */
+
+.portfolio-section {
+    padding: 50px 0;
+}
+
+
+.poster-image {
+    max-height: 90vh;
+    object-fit: contain;
+    padding: 20px;
+    margin: 0 auto;
+}
+.modal-dialog {
+    max-height: 95vh; /* Asegura que el modal ocupe casi toda la pantalla, pero sin cubrir completamente */
+    width: auto;      /* Deja que el ancho se ajuste al contenido */
+}
+
+.modal-content {
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+.poster-image {
+    height: 85vh;  /* Asegura que el póster ocupe casi toda la altura disponible */
+    object-fit: contain; /* Para que la imagen mantenga la proporción adecuada */
+}
+
+.carousel-caption {
+    bottom: 10%; /* Para mejorar la posición de los textos */
+}
+
+/* CSS for the poster image */
+.poster-image {
+    cursor: zoom-in; /* Change cursor to indicate zoom functionality */
+    transition: transform 0.3s ease; /* Smooth zoom transition */
+    max-height: 80vh; /* Limit the height to fit inside the modal */
+    object-fit: contain; /* Ensure image maintains its aspect ratio */
+}
+
+/* When the image is zoomed in */
+.poster-image.zoomed {
+    cursor: zoom-out; /* Change cursor when zoomed in */
+    transform: scale(4); /* Adjust zoom level */
+}
+
+.project-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .project-card img {
+    max-height: 200px; /* Or adjust based on your layout */
+    object-fit: cover;
+  }
+
+  
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.card-img-top {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #4a4a4a;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-color: #6c63ff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: #fff;
+    font-weight: 600;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #5a53d8;
+}
+
+.project-card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 30px;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.card-img-top {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.btn-primary {
+    background-color: #6c63ff;
+    border: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #5753d9;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-body img {
+    max-height: 400px;
+    object-fit: contain;
+    margin: auto;
+    display: block;
+}
+
+.modal-body p, .modal-body ul {
+    color: #4a4a4a;
+}
+
+/*  EXPERIENCE */
+/* Timeline Container */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin: 2rem 0;
+}
+
+/* Timeline Line */
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%; /* Center the timeline line */
+    width: 2px;
+    background-color: #6c63ff; /* Purple line */
+    z-index: -1;
+}
+
+/* Timeline Item */
+.timeline-item {
+    position: relative;
+    width: 45%; /* Half the width of the container */
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+}
+
+.timeline-item.right {
+    align-self: flex-end;
+    text-align: right;
+}
+
+.timeline-item.left {
+    align-self: flex-start;
+    text-align: left;
+}
+
+
+
+/* Timeline Content */
+.timeline-content {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Hover Effect */
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Title and Subtitle */
+.timeline-content h5 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content h6 {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 1rem;
+}
+
+/* Button Styling */
+.timeline-content .btn {
+    font-size: 0.9rem;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .timeline-item {
+        width: 100%; /* Full width on smaller screens */
+        text-align: left;
+        margin: 1rem 0;
+    }
+
+    .timeline-item.right,
+    .timeline-item.left {
+        align-self: flex-start; /* Align all items to the left */
+    }
+
+    .timeline::before {
+        left: 20px; /* Adjust the timeline line to be on the left */
+    }
+
+    .timeline-dot {
+        left: 20px; /* Position the dot to match the line */
+    }
+}
+
+
+
+#insights {
+    padding: 50px 0;
+    background-color: #fff; /* Matches the page background */
+}
+
+#insights .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+#skillsChart {
+    margin: 0 auto; /* Center the chart */
+    display: block;
+    max-width: 80%; /* Adjust chart width */
+}
+
+
+.contact-section {
+    background-color: #f9f9f9;
+    padding: 3rem 1rem;
+    border-top: 2px solid #6c63ff;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    color: #555;
+}
+
+.contact-info i {
+    color: #6c63ff;
+    margin-right: 10px;
+}
+
+.availability-section {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.availability-section h4 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.availability-list .list-group-item {
+    border: none;
+    font-size: 1rem;
+    color: #555;
+    padding: 0.5rem 0;
+}
+
+
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none; /* Hidden by default */
+    z-index: 1000;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 50px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+#backToTop:hover {
+    background-color: #5a53d9;
+}
+
